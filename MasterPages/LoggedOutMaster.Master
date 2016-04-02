@@ -1,0 +1,25 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="LoggedOutMaster.master.cs" Inherits="VMS.MasterPages.LoggedOutMaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="../Website/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body >
+    <form  id="myForm" ng-app="" runat="server"
+                            name="myForm" novalidate>
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+    <script src="../Website/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../Scripts/angular.min.js"></script>
+</html>
