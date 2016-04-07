@@ -1,7 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VMS", "VMS.csproj", "{441B8897-95E6-496E-9B33-32679CE74515}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helper", "..\Helper\Helper.csproj", "{AD4CBD27-D748-49A3-8ED2-CC35388AE977}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Config", "..\Config\Config.csproj", "{D3B668CF-C118-4A24-8CB5-E379880491F8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,6 +19,14 @@ Global
 		{441B8897-95E6-496E-9B33-32679CE74515}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{441B8897-95E6-496E-9B33-32679CE74515}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{441B8897-95E6-496E-9B33-32679CE74515}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD4CBD27-D748-49A3-8ED2-CC35388AE977}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD4CBD27-D748-49A3-8ED2-CC35388AE977}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD4CBD27-D748-49A3-8ED2-CC35388AE977}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD4CBD27-D748-49A3-8ED2-CC35388AE977}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3B668CF-C118-4A24-8CB5-E379880491F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3B668CF-C118-4A24-8CB5-E379880491F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3B668CF-C118-4A24-8CB5-E379880491F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3B668CF-C118-4A24-8CB5-E379880491F8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

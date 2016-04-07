@@ -19,6 +19,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -58,7 +59,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ChangePassword.aspx" />
+    <Content Include="CreateAccount.aspx" />
     <Content Include="Dashboard.aspx" />
+    <Content Include="ForgotPassword.aspx" />
     <Content Include="index.html" />
     <Content Include="Login.aspx" />
     <Content Include="Logout.aspx" />
@@ -536,12 +539,26 @@
     </Compile>
     <Compile Include="Controllers\ChangePasswordController.cs" />
     <Compile Include="App_Code\DBProcs.cs" />
+    <Compile Include="CreateAccount.aspx.cs">
+      <DependentUpon>CreateAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreateAccount.aspx.designer.cs">
+      <DependentUpon>CreateAccount.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Dashboard.aspx.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Dashboard.aspx.designer.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ForgotPassword.aspx.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ForgotPassword.aspx.designer.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -564,6 +581,13 @@
     <Compile Include="MasterPages\LoggedInMaster.Master.designer.cs">
       <DependentUpon>LoggedInMaster.Master</DependentUpon>
     </Compile>
+    <Compile Include="MasterPages\LoggedInPopup.Master.cs">
+      <DependentUpon>LoggedInPopup.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPages\LoggedInPopup.Master.designer.cs">
+      <DependentUpon>LoggedInPopup.Master</DependentUpon>
+    </Compile>
     <Compile Include="MasterPages\LoggedOutMaster.Master.cs">
       <DependentUpon>LoggedOutMaster.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -572,11 +596,19 @@
       <DependentUpon>LoggedOutMaster.Master</DependentUpon>
     </Compile>
     <Compile Include="Controllers\SideMenuController.cs" />
+    <Compile Include="MasterPages\LoggedOutPopup.Master.cs">
+      <DependentUpon>LoggedOutPopup.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPages\LoggedOutPopup.Master.designer.cs">
+      <DependentUpon>LoggedOutPopup.Master</DependentUpon>
+    </Compile>
     <Compile Include="Models\ChangePasswordModel.cs" />
     <Compile Include="Models\SideMenuModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RV\RV.ascx.cs">
       <DependentUpon>RV.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="RV\RV.ascx.designer.cs">
       <DependentUpon>RV.ascx</DependentUpon>
@@ -613,6 +645,8 @@
   <ItemGroup>
     <Content Include="MasterPages\LoggedInMaster.Master" />
     <Content Include="MasterPages\LoggedOutMaster.Master" />
+    <Content Include="MasterPages\LoggedInPopup.Master" />
+    <Content Include="MasterPages\LoggedOutPopup.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -943,6 +977,16 @@
     <Content Include="Website\less\variables.less" />
     <Content Include="Website\LICENSE" />
     <Content Include="Website\README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Config\Config.csproj">
+      <Project>{d3b668cf-c118-4a24-8cb5-e379880491f8}</Project>
+      <Name>Config</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Helper\Helper.csproj">
+      <Project>{ad4cbd27-d748-49a3-8ed2-cc35388ae977}</Project>
+      <Name>Helper</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
