@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="True" CodeBehind="CaptchaImage.aspx.cs" Inherits="ICSI.WebPage.CaptchaImage" %>

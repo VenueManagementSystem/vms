@@ -21,6 +21,10 @@
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
+    <script src='<%# ResolveUrl("~/Website/bower_components/jquery/dist/jquery.min.js") %>'></script>
+    <script src='<%# ResolveUrl("~/Website/bower_components/bootstrap/dist/js/bootstrap.min.js") %>'></script>
+    <script src='<%# ResolveUrl("~/Website/dist/js/sb-admin-2.js") %>'></script>
+    <script src='<%# ResolveUrl("~/Website/bower_components/metisMenu/dist/metisMenu.min.js") %>'></script>
 </head>
 <body>
 
@@ -47,22 +51,7 @@
             </asp:ContentPlaceHolder>
         </div>
     </div>
-   <%-- <script src="../Scripts/jquery-1.7.1.min.js"></script>
-    <script src="../Scripts/jquery.validate.min.js"></script>
     
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $("#form1").validate();
-        });
-
-    </script>--%>
-    <script src="../Website/bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="../Website/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    
-    <script src="../Website/dist/js/sb-admin-2.js"></script>
-    <script src="../Scripts/validator.js"></script>
-    <script src="../Website/bower_components/metisMenu/dist/metisMenu.min.js"></script>
-
 </body>
 
 </html>

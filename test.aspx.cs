@@ -5,13 +5,13 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace VMS.MasterPages
+namespace VMS
 {
-    public partial class LoggedOutMaster : System.Web.UI.MasterPage
+    public partial class test : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //Page.Header.DataBind();
+
         }
     }
 }
