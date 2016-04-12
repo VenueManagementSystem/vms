@@ -14,9 +14,25 @@ namespace VMS
     class DBProcs
     {
         //private static string conLog = System.Configuration.ConfigurationManager.AppSettings["conLog"];
-        internal static string ChangePassword(ChangePasswordModel Model)
+        internal static void ChangePassword(ChangePasswordModel Model, ChangePasswordView View, T001 t001)
         {
-            return "0";
+            using (TransactionScope ts = new TransactionScope())
+            {
+                T004 t004 = new T004(View._objSession);
+                t004._T004002 = t001._T001001;
+                t004._T004003 = Model.OldPassword;
+                t004._T004004 = Model.OldPassword;
+                t004._T004005 = DateTime.Now.ToString();
+                t004.fn_addRecord(View._objSession, View._errMsg);
+
+                t001._T001004 = Model.NewPassword;
+                t001._T001005 = Model.NewPassword;
+                t001._T001DF8 = DateTime.Now.ToString();
+                t001._T001DF9 = View._objSession.UserID.ToString();
+                t001.fn_updateRecord(View._objSession, View._errMsg);
+
+                ts.Complete();
+            }            
         }
 
         internal static DataSet CreateProcClass(UserIdentity _objSession, Error _errMsg, string query)
@@ -50,7 +66,7 @@ namespace VMS
                 t002.fn_addRecord(_objSession, _errMsg);
                 //TODO: Send email
                 ts.Complete();
-            }            
+            }
 
             _errMsg.PageMessage = "User created successfully.";
             _errMsg.PageMessageType = Constants.Alerts[Constants.PageMessageType.Success];

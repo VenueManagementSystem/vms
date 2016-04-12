@@ -14,7 +14,7 @@ namespace VMS
         protected void Page_Load(object sender, EventArgs e)
         {
             _errMsg.PageMessage = "Please fill your details";
-            _errMsg.PageMessageType = "alert-info";
+            _errMsg.PageMessageType = Constants.Alerts[Constants.PageMessageType.Info];
             if(!IsPostBack)
             {
                 //string salt = Config.Login.generateSalt();

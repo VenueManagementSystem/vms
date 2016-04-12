@@ -60,7 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CaptchaImage.aspx" />
-    <Content Include="ChangePassword.aspx" />
+    <Content Include="ChangePasswordView.aspx" />
     <Content Include="CreateAccount.aspx" />
     <Content Include="Css\Captcha.css" />
     <Content Include="Dashboard.aspx" />
@@ -83,7 +83,6 @@
     <Content Include="test.aspx" />
     <Content Include="test.html" />
     <Content Include="UserProfile.aspx" />
-    <Content Include="Views\ChangePasswordView.ascx" />
     <Content Include="Views\SideMenuView.ascx" />
     <Content Include="Views\TopMenuView.ascx" />
     <Content Include="Web.config">
@@ -550,12 +549,12 @@
       <DependentUpon>CaptchaImage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ChangePassword.aspx.cs">
-      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    <Compile Include="ChangePasswordView.aspx.cs">
+      <DependentUpon>ChangePasswordView.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ChangePassword.aspx.designer.cs">
-      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    <Compile Include="ChangePasswordView.aspx.designer.cs">
+      <DependentUpon>ChangePasswordView.aspx</DependentUpon>
     </Compile>
     <Compile Include="Controllers\ChangePasswordController.cs" />
     <Compile Include="DBProcs\DBProcs.cs" />
@@ -660,13 +659,6 @@
     </Compile>
     <Compile Include="UserProfile.aspx.designer.cs">
       <DependentUpon>UserProfile.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\ChangePasswordView.ascx.cs">
-      <DependentUpon>ChangePasswordView.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\ChangePasswordView.ascx.designer.cs">
-      <DependentUpon>ChangePasswordView.ascx</DependentUpon>
     </Compile>
     <Compile Include="Views\SideMenuView.ascx.cs">
       <DependentUpon>SideMenuView.ascx</DependentUpon>

@@ -127,7 +127,10 @@ namespace VMS.Module.Misc
                 #endregion
 
                 #region Select
-                ProcSelect.Append(", " + (counter % 6 == 0 ? Environment.NewLine : string.Empty) + _dr["column_name"].ToString());
+                if (_dr["type"].ToString().ToLower() == "timestamp")
+                    ProcSelect.Append(", " + (counter % 6 == 0 ? Environment.NewLine : string.Empty) + "cast(" + _dr["column_name"].ToString() + " as bigint) " + _dr["column_name"].ToString() + "");
+                else
+                    ProcSelect.Append(", " + (counter % 6 == 0 ? Environment.NewLine : string.Empty) + _dr["column_name"].ToString());
                 #endregion
 
                 #region Class

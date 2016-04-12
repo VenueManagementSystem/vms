@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace VMS.Views {
+namespace VMS {
     
     
     public partial class ChangePasswordView {
@@ -22,13 +22,13 @@ namespace VMS.Views {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// hdnUserId control.
+        /// hdnLoginId control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField hdnUserId;
+        protected global::System.Web.UI.WebControls.HiddenField hdnLoginId;
         
         /// <summary>
         /// txtOldPwd control.
