@@ -1,0 +1,5 @@
+﻿insert into R001(R001001, R001002, R001003, R001004, R001005, R001006, R001007, R001008, 
+R001009, R001010, R001011, R001012, R001013, R001014, R001015, R001016, R001017, R001018, 
+R001DF1, R001DF2, R001DF3, R001DF4,  R001DF6, R001DF7, R001DF8, R001DF9)
+select next value for [R001_Seq],newid(),'vUsers',20,'Users','Search Users','Users List',1,1,1,'~/MasterPages/LoggedInMaster.Master','Search',
+null,null,1,1,'~/test.aspx',1,1111,1111,getdate(),1111,newid(),1,getdate(),1111

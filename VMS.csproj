@@ -69,6 +69,7 @@
     <Content Include="index.html" />
     <Content Include="Login.aspx" />
     <Content Include="Logout.aspx" />
+    <Content Include="Module\GenericView.aspx" />
     <Content Include="Module\Misc\CreateClassProc.aspx" />
     <Content Include="Module\Misc\DownloadClassProc.aspx" />
     <Content Include="RV\RV.ascx" />
@@ -82,6 +83,7 @@
     <Content Include="Scripts\validator.js" />
     <Content Include="test.aspx" />
     <Content Include="test.html" />
+    <Content Include="TextFile1.txt" />
     <Content Include="UserProfile.aspx" />
     <Content Include="Views\SideMenuView.ascx" />
     <Content Include="Views\TopMenuView.ascx" />
@@ -624,6 +626,13 @@
     </Compile>
     <Compile Include="Models\ChangePasswordModel.cs" />
     <Compile Include="Models\SideMenuModel.cs" />
+    <Compile Include="Module\GenericView.aspx.cs">
+      <DependentUpon>GenericView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\GenericView.aspx.designer.cs">
+      <DependentUpon>GenericView.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Module\Misc\CreateClassProc.aspx.cs">
       <DependentUpon>CreateClassProc.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1023,6 +1032,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Code\" />
+    <Folder Include="Module\Content\Metadata\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

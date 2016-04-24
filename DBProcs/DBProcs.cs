@@ -32,7 +32,18 @@ namespace VMS
                 t001.fn_updateRecord(View._objSession, View._errMsg);
 
                 ts.Complete();
-            }            
+            }
+        }
+
+        internal static DataSet GetGenericViewData(UserIdentity _objSession, Error _errMsg)
+        {
+            return SqlHelper.ExecuteDataset(Constants.conLog, CommandType.StoredProcedure, "GetGenericViewData",
+                new SqlParameter("@PageId", _objSession.QueryString["PageId"]));
+        }
+
+        internal static DataTable GetGenericGridData(string table, UserIdentity _objSession, Error _errMsg)
+        {
+            return SqlHelper.ExecuteDataset(Constants.conLog, CommandType.Text, "select * from " + table).Tables[0];
         }
 
         internal static DataSet CreateProcClass(UserIdentity _objSession, Error _errMsg, string query)
